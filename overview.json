@@ -21,7 +21,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "11.6.0-82840.patch1-83472"
+      "version": "12.0.0-85518.patch7-85777"
     },
     {
       "type": "datasource",
@@ -158,7 +158,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "11.6.0-82840.patch1-83472",
+      "pluginVersion": "12.0.0-85518.patch7-85777",
       "targets": [
         {
           "datasource": {
@@ -166,7 +166,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sum(rate(planetscale_vtgate_commands_count{planetscale_database_branch_id='$database_branch'}[$__rate_interval])) by (planetscale_command)",
+          "expr": "sum(rate(planetscale_vtgate_commands_total{planetscale_database_branch_id='$database_branch'}[$__rate_interval])) by (planetscale_command)",
           "interval": "",
           "legendFormat": "{{planetscale_command}}",
           "range": true,
@@ -260,7 +260,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "11.6.0-82840.patch1-83472",
+      "pluginVersion": "12.0.0-85518.patch7-85777",
       "targets": [
         {
           "datasource": {
@@ -268,7 +268,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sum(rate(planetscale_vtgate_errors_count{planetscale_database_branch_id='$database_branch'}[$__rate_interval])) by (planetscale_vtgate_code)",
+          "expr": "sum(rate(planetscale_vtgate_errors_total{planetscale_database_branch_id='$database_branch'}[$__rate_interval])) by (planetscale_vtgate_code)",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -377,7 +377,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "11.6.0-82840.patch1-83472",
+      "pluginVersion": "12.0.0-85518.patch7-85777",
       "targets": [
         {
           "datasource": {
@@ -479,7 +479,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "11.6.0-82840.patch1-83472",
+      "pluginVersion": "12.0.0-85518.patch7-85777",
       "targets": [
         {
           "datasource": {
@@ -582,7 +582,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "11.6.0-82840.patch1-83472",
+      "pluginVersion": "12.0.0-85518.patch7-85777",
       "targets": [
         {
           "datasource": {
@@ -699,7 +699,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.6.0-82840.patch1-83472",
+      "pluginVersion": "12.0.0-85518.patch7-85777",
       "targets": [
         {
           "datasource": {
@@ -801,7 +801,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "11.6.0-82840.patch1-83472",
+      "pluginVersion": "12.0.0-85518.patch7-85777",
       "targets": [
         {
           "datasource": {
@@ -902,7 +902,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "11.6.0-82840.patch1-83472",
+      "pluginVersion": "12.0.0-85518.patch7-85777",
       "targets": [
         {
           "datasource": {
@@ -1039,7 +1039,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.6.0-82840.patch1-83472",
+      "pluginVersion": "12.0.0-85518.patch7-85777",
       "targets": [
         {
           "datasource": {
@@ -1154,7 +1154,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.6.0-82840.patch1-83472",
+      "pluginVersion": "12.0.0-85518.patch7-85777",
       "targets": [
         {
           "datasource": {
@@ -1255,7 +1255,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "11.6.0-82840.patch1-83472",
+      "pluginVersion": "12.0.0-85518.patch7-85777",
       "targets": [
         {
           "datasource": {
@@ -1377,7 +1377,7 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "sum(rate(planetscale_vtgate_queries_duration_count{planetscale_database_branch_id='$database_branch'}[$__rate_interval])) by (planetscale_pod)",
+          "expr": "sum(rate(planetscale_vtgate_commands_total{planetscale_database_branch_id='$database_branch'}[$__rate_interval])) by (planetscale_pod)",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -1680,7 +1680,7 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "sum(rate(planetscale_vtgate_returned_rows_count{planetscale_database_branch_id='$database_branch'}[$__rate_interval])) by (planetscale_pod)",
+          "expr": "sum(rate(planetscale_vtgate_returned_rows_total{planetscale_database_branch_id='$database_branch'}[$__rate_interval])) by (planetscale_pod)",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -1781,7 +1781,7 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "sum(rate(planetscale_vtgate_affected_rows_count{planetscale_database_branch_id='$database_branch'}[$__rate_interval])) by (planetscale_pod)",
+          "expr": "sum(rate(planetscale_vtgate_affected_rows_total{planetscale_database_branch_id='$database_branch'}[$__rate_interval])) by (planetscale_pod)",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -1895,7 +1895,7 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "sum(irate(planetscale_vttablet_queries_count{planetscale_database_branch_id=\"$database_branch\", planetscale_keyspace=~'$planetscale_keyspace', planetscale_shard=~'$planetscale_shard'}[$__rate_interval])) by (planetscale_keyspace, planetscale_shard, planetscale_tablet_type)",
+          "expr": "sum(irate(planetscale_vttablet_queries_total{planetscale_database_branch_id=\"$database_branch\", planetscale_keyspace=~'$planetscale_keyspace', planetscale_shard=~'$planetscale_shard'}[$__rate_interval])) by (planetscale_keyspace, planetscale_shard, planetscale_tablet_type)",
           "legendFormat": "{{planetscale_keyspace}}/{{planetscale_shard}}@{{planetscale_tablet_type}}",
           "range": true,
           "refId": "A"
@@ -2402,7 +2402,7 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "sum(rate(planetscale_mysql_innodb_row_operations_count{planetscale_database_branch_id='$database_branch', planetscale_keyspace=~'$planetscale_keyspace', planetscale_shard=~'$planetscale_shard'}[$__rate_interval])) by (planetscale_mysql_operation_type)",
+          "expr": "sum(rate(planetscale_mysql_innodb_row_operations_total{planetscale_database_branch_id='$database_branch', planetscale_keyspace=~'$planetscale_keyspace', planetscale_shard=~'$planetscale_shard'}[$__rate_interval])) by (planetscale_mysql_operation_type)",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -2773,7 +2773,7 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "sum(rate(planetscale_vtorc_successful_recoveries_count{planetscale_database_branch_id='$database_branch'}[$__rate_interval]) != 0) by (planetscale_vtorc_recovery_type)",
+          "expr": "sum(rate(planetscale_vtorc_successful_recoveries_total{planetscale_database_branch_id='$database_branch'}[$__rate_interval]) != 0) by (planetscale_vtorc_recovery_type)",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -2784,7 +2784,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sum(rate(planetscale_vtorc_successful_recoveries_count{planetscale_database_branch_id='$database_branch'}[$__rate_interval]) != 0) by (planetscale_vtorc_recovery_type)",
+          "expr": "sum(rate(planetscale_vtorc_successful_recoveries_total{planetscale_database_branch_id='$database_branch'}[$__rate_interval]) != 0) by (planetscale_vtorc_recovery_type)",
           "hide": false,
           "instant": false,
           "legendFormat": "__auto",
@@ -3432,7 +3432,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sum (rate(planetscale_vttablet_connection_pool_get_count{planetscale_database_branch_id='$database_branch', planetscale_keyspace=~'$planetscale_keyspace', planetscale_shard=~'$planetscale_shard'}[$__rate_interval])) by (planetscale_keyspace)",
+          "expr": "sum (rate(planetscale_vttablet_connection_pool_get_total{planetscale_database_branch_id='$database_branch', planetscale_keyspace=~'$planetscale_keyspace', planetscale_shard=~'$planetscale_shard'}[$__rate_interval])) by (planetscale_keyspace)",
           "legendFormat": "Conn: {{planetscale_keyspace}}",
           "range": true,
           "refId": "A"
@@ -3443,7 +3443,7 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "sum (rate(planetscale_vttablet_transaction_pool_get_count{planetscale_database_branch_id='$database_branch', planetscale_keyspace=~'$planetscale_keyspace', planetscale_shard=~'$planetscale_shard'}[$__rate_interval])) by (planetscale_keyspace)",
+          "expr": "sum (rate(planetscale_vttablet_transaction_pool_get_total{planetscale_database_branch_id='$database_branch', planetscale_keyspace=~'$planetscale_keyspace', planetscale_shard=~'$planetscale_shard'}[$__rate_interval])) by (planetscale_keyspace)",
           "hide": false,
           "instant": false,
           "legendFormat": "Transaction: {{planetscale_keyspace}}",
@@ -3456,7 +3456,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sum (rate(planetscale_vttablet_found_rows_pool_get_count{planetscale_database_branch_id='$database_branch', planetscale_keyspace=~'$planetscale_keyspace', planetscale_shard=~'$planetscale_shard'}[$__rate_interval])) by (planetscale_keyspace)",
+          "expr": "sum (rate(planetscale_vttablet_found_rows_pool_get_total{planetscale_database_branch_id='$database_branch', planetscale_keyspace=~'$planetscale_keyspace', planetscale_shard=~'$planetscale_shard'}[$__rate_interval])) by (planetscale_keyspace)",
           "hide": false,
           "instant": false,
           "legendFormat": "Found Rows: {{planetscale_keyspace}}",
@@ -3469,7 +3469,7 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "sum (rate(planetscale_vttablet_stream_connection_pool_get_count{planetscale_database_branch_id='$database_branch', planetscale_keyspace=~'$planetscale_keyspace', planetscale_shard=~'$planetscale_shard'}[$__rate_interval])) by (planetscale_keyspace)",
+          "expr": "sum (rate(planetscale_vttablet_stream_connection_pool_get_total{planetscale_database_branch_id='$database_branch', planetscale_keyspace=~'$planetscale_keyspace', planetscale_shard=~'$planetscale_shard'}[$__rate_interval])) by (planetscale_keyspace)",
           "hide": false,
           "instant": false,
           "legendFormat": "Stream: {{planetscale_keyspace}}",
@@ -3893,6 +3893,6 @@
   "timezone": "browser",
   "title": "Branch Overview",
   "uid": "aees0o6pq62gwe",
-  "version": 136,
+  "version": 144,
   "weekStart": ""
 }
