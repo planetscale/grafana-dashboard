@@ -1,6 +1,6 @@
 ## Grafana
 
-This repository contains the canonical dashboard(s) for graphing information about PlanetScale databases. See our [docs]() for how to use them.
+This repository contains the canonical dashboard(s) for graphing information about PlanetScale databases. See our [docs](https://planetscale.com/docs/tutorials/prometheus-metrics-grafana) for how to use them.
 
 Presently, we have the following dashboards:
 
