@@ -4,4 +4,6 @@ This repository contains the canonical dashboard(s) for graphing information abo
 
 Presently, we have the following dashboards:
 
-- [Branch Overview](overview.json) - this provides a summary of an individual PlanetScale branch, with metrics like CPU, Memory and information about individual Vitess components. 
+- [Vitess Overview](overview.json) - this provides a summary of an individual PlanetScale branch, with metrics like CPU, Memory and information about individual Vitess components. 
+
+- [Postgres Overview](postgres.json) - this provides a summary of an individual PlanetScale branch, with metrics like CPU, Memory and information about individual Postgres components. 
