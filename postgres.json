@@ -1172,13 +1172,13 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sum by (planetscale_pod)(planetscale_pods_iops_total{planetscale_database_branch_id=~\"$database_branch\", planetscale_component=\"hzinstance\", planetscale_role=\"primary\"})",
+          "expr": "sum by (planetscale_pod)(rate(planetscale_pods_iops_total{planetscale_database_branch_id=~\"$database_branch\", planetscale_component=\"hzinstance\", planetscale_role=\"primary\"}[$__rate_interval]))",
           "legendFormat": "{{planetscale_pod}}",
           "range": true,
           "refId": "A"
         }
       ],
-      "title": "Primary IOPS",
+      "title": "Primary IOPS Rate",
       "type": "timeseries"
     },
     {
@@ -1394,13 +1394,13 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sum by (planetscale_pod)(planetscale_pods_iops_total{planetscale_database_branch_id=~\"$database_branch\", planetscale_component=\"hzinstance\", planetscale_role=\"replica\"})",
+          "expr": "sum by (planetscale_pod)(rate(planetscale_pods_iops_total{planetscale_database_branch_id=~\"$database_branch\", planetscale_component=\"hzinstance\", planetscale_role=\"replica\"}[$__rate_interval]))",
           "legendFormat": "{{planetscale_pod}}",
           "range": true,
           "refId": "A"
         }
       ],
-      "title": "Replica IOPS",
+      "title": "Replica IOPS Rate",
       "type": "timeseries"
     },
     {
