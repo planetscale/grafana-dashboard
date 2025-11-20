@@ -140,7 +140,7 @@
           "refId": "A"
         }
       ],
-      "title": "Transactions per Second (Commits)",
+      "title": "Commits per Second",
       "type": "timeseries"
     },
     {
@@ -619,7 +619,7 @@
           "refId": "A"
         }
       ],
-      "title": "Connections by Role",
+      "title": "Connections by Cluster Role",
       "type": "timeseries"
     },
     {
@@ -2090,7 +2090,7 @@
         },
         "definition": "label_values(planetscale_postgres_connection_state, planetscale_database_name)",
         "includeAll": true,
-        "label": "Database",
+        "label": "Database (Collection of Branches)",
         "multi": true,
         "name": "planetscale_database_name",
         "options": [],
@@ -2112,7 +2112,7 @@
         },
         "definition": "label_values(planetscale_postgres_connection_state{planetscale_database_name=~\"$planetscale_database_name\"}, planetscale_database_branch_id)",
         "includeAll": true,
-        "label": "Branch",
+        "label": "Branch ID",
         "multi": true,
         "name": "database_branch",
         "options": [],
